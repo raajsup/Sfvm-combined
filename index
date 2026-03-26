@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Architectuur van de Realiteit - Onderzoeksdata</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f9;
+            --text-color: #333;
+            --header-bg: #2c3e50;
+            --header-text: #ecf0f1;
+            --table-border: #bdc3c7;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: var(--header-bg);
+            color: var(--header-text);
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        th, td {
+            border: 1px solid var(--table-border);
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ecf0f1;
+        }
+       .code-block {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Architectuur van de Realiteit Framework</h1>
+        <p>Interactieve datarepresentatie van Fundamentele Constanten, SFVM en Sacrale Geometrie.</p>
+    </header>
+
+    <section id="constanten">
+        <h2>1. De 26 Dimensieloze Constanten van het Standaardmodel</h2>
+        <p>Een overzicht van de fundamenten die het universum definiëren, onafhankelijk van maateenheden.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categorie</th>
+                    <th>Sub-Parameter</th>
+                    <th>Aantal parameters</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>IJkkoppelingen</td>
+                    <td>Fijnstructuurconstante (&alpha;), Sterke koppelingsconstante</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Fermionmassa's</td>
+                    <td>Quarks (6), Leptonen (6)</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Boson Parameters</td>
+                    <td>Massieve ijkbosonen (W, Z), Higgs (massa & kwartische koppeling)</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CKM Matrix</td>
+                    <td>Quarkmenging (3 hoeken, 1 CP-schendende fase)</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>PMNS Matrix</td>
+                    <td>Neutrinomenging (3 hoeken, 1 fase)</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Kosmologisch</td>
+                    <td>Kosmologische Constante (&Lambda;) - Donkere Energie</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><strong>Totaal</strong></td>
+                    <td><strong>Volledig kwantum-mechanisch & macro-fysisch model</strong></td>
+                    <td><strong>26</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="vortex-math">
+        <h2>2. Vortex Wiskunde (Modulo 9 Sequentie Generator)</h2>
+        <p>JavaScript implementatie van de VBM verdubbelingssequentie (1-2-4-8-7-5) via Base-10 digitale reductie.</p>
+        <div class="code-block">
+<script>
+// JavaScript logica voor de digitale wortel en de VBM-verdubbelingssequentie
+function digitalRoot(n) {
+    if (n === 0) return 0;
+    return (n % 9 === 0)? 9 : (n % 9);
+}
+
+function genereerVortexSequentie(iteraties) {
+    let sequentie =;
+    let huidigGetal = 1;
+    for (let i = 0; i < iteraties; i++) {
+        sequentie.push(digitalRoot(huidigGetal));
+        huidigGetal *= 2;
+    }
+    return sequentie;
+}
+
+// Resultaat weergave voor 6 iteraties:
+// console.log("De VBM Sequentie is: ", genereerVortexSequentie(6)); 
+// Output: 
+</script>
+        </div>
+    </section>
+
+    <section id="sacrale-geometrie">
+        <h2>3. Sacrale Geometrie: Levensbloem (Flower of Life) Expressie</h2>
+        <p>Wiskundige berekening van het aantal overlappende sferen/cirkels per radiale progressie $n$. Formule: $3n^2 - 3n + 1$.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Iteratie / Progressie (n)</th>
+                    <th>Toepassing (Geometrisch Patroon)</th>
+                    <th>Aantal overlappende eenheden</th>
+                </tr>
+            </thead>
+            <tbody id="geometrie-tabel">
+                </tbody>
+        </table>
+        
+        <script>
+            function flowerOfLifeFormula(n) {
+                return (3 * Math.pow(n, 2)) - (3 * n) + 1;
+            }
+            
+            const tbody = document.getElementById('geometrie-tabel');
+            const fasen =;
+            
+            for(let i = 1; i <= 6; i++) {
+                let row = `<tr>
+                    <td>${i}</td>
+                    <td>${fasen[i-1]}</td>
+                    <td>${flowerOfLifeFormula(i)}</td>
+                </tr>`;
+                tbody.innerHTML += row;
+            }
+        </script>
+    </section>
+
+</body>
+</html>
